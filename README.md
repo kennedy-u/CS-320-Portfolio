@@ -1,2 +1,1 @@
-# CS-320-Projects
-Department Of Computer Sciences
+# CS-320-Projects: Department Of Computer Sciences
