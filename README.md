@@ -1,12 +1,9 @@
 # CS-320-Projects: Department of Computer Sciences
 
 
-
-Below are topics addressed in this release. 
-
 How can I ensure that my codebase, program, or software is functional and secure?
 
-To ensure that codebase, program, or software is functional and secure, developers should use an environment that suggests secure methods and reinforces security best practices through notifications in the environment. Also, developers should choose their programming language and framework based on the needs of the project and their company! An effective way to ensure the functionality of a software is that the developers need to understand the strengths and weaknesses of their chosen language, so they understand the challenges and understand the integrity of the software in development.
+To ensure that the codebase, program, or software is functional and secure, developers should use an environment that suggests secure methods and reinforces security best practices through notifications in the environment. Also, developers should choose their programming language and framework based on the needs of the project and their company! An effective way to ensure the functionality of a software is that the developers need to understand the strengths and weaknesses of their chosen language, so they understand the challenges and understand the integrity of the software in development.
 
 For this practice, I automated the process to make security best practices easier to adopt. The goal was to ensure that as I was developing, I am also able to rise flaws/errors during the natural development stage, rather than conduct security scans only at the end of the process. The test automation tools can be used as the software is being developed. 
 
