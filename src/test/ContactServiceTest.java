@@ -8,10 +8,20 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class ContactServiceTest {
-    protected String contactId, firstNameTest, lastNameTest, phoneNumberTest,
-            addressTest;
-    protected String tooLongContactId, tooLongFirstName, tooLongLastName,
-            tooLongPhoneNumber, tooShortPhoneNumber, tooLongAddress;
+        protected String 
+                contactId, 
+                firstNameTest, 
+                lastNameTest, 
+                phoneNumberTest,
+                addressTest;
+
+        protected String
+                tooLongContactId, 
+                tooLongFirstName, 
+                tooLongLastName,
+                tooLongPhoneNumber, 
+                tooShortPhoneNumber, 
+                tooLongAddress;
 
     @BeforeEach
     void setUp() {
