@@ -1,4 +1,4 @@
-# CS-320-Projects: Department of Computer Sciences
+# CS-320-Portfolio
 
 
 ## How can I ensure that my codebase, program, or software is functional and secure?
