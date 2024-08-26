@@ -8,11 +8,15 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class ContactTest {
+        // Variables for valid test data
     protected String contactId, firstNameTest, lastNameTest, phoneNumberTest,
             addressTest;
+        // Variables for invalid test data
     protected String tooLongContactId, tooLongFirstName, tooLongLastName,
             tooLongPhoneNumber, tooShortPhoneNumber, tooLongAddress;
 
+
+        // Set up the test data: Initializes test data before each test method is run
     @BeforeEach
     void setUp() {
         contactId = "1029F847A6";
@@ -20,6 +24,8 @@ public class ContactTest {
         lastNameTest = "Smith";
         phoneNumberTest = "5553331234";
         addressTest = "1 Audrey Jersey City NJ 07305";
+
+        // Set up invalid test data: Variables for invalid test data
         tooLongContactId = "112233445566778899";
         tooLongFirstName = "John Jacob Jingle";
         tooLongLastName = "-heimer Schmidt";
@@ -27,7 +33,7 @@ public class ContactTest {
         tooShortPhoneNumber = "1234567";
         tooLongAddress = "1 Audrey Zapp Drive, Jersey City, NJ 07305";
     }
-
+        // Test the constructors: Test the constructors to ensure that they create a new Contact object with the correct values
     @Test
     void contactTest() {
         Contact contact = new Contact();
@@ -41,8 +47,10 @@ public class ContactTest {
                 ()
                         -> assertNotNull(contact.getPhoneNumber()),
                 () -> assertNotNull(contact.getAddress()));
-    }
 
+
+    }
+        // Tests the constructor with a contact ID
     @Test
     void contactIdConstructorTest() {
         Contact contact = new Contact(contactId);
@@ -58,6 +66,7 @@ public class ContactTest {
                 () -> assertNotNull(contact.getAddress()));
     }
 
+        // Tests the constructor with contact ID and first name
     @Test
     void contactIdAndFirstNameConstructorTest() {
         Contact contact = new Contact(contactId, firstNameTest);
@@ -73,6 +82,7 @@ public class ContactTest {
                 () -> assertNotNull(contact.getAddress()));
     }
 
+    // Tests the constructor with contact ID, first name, and last name
     @Test
     void contactIdAndFullNameConstructorTest() {
         Contact contact = new Contact(contactId, firstNameTest, lastNameTest);
@@ -88,6 +98,7 @@ public class ContactTest {
                 () -> assertNotNull(contact.getAddress()));
     }
 
+    // Tests the constructor with contact ID, first name, last name, and phone number
     @Test
     void contactIdFullNamePhoneNumberConstructorTest() {
         Contact contact =
@@ -104,6 +115,8 @@ public class ContactTest {
                 () -> assertNotNull(contact.getAddress()));
     }
 
+    // Tests the constructor with all the proper things
+    // Tests the constructor with all parameters: contact ID, first name, last name, phone number, and address
     @Test
     void allTheProperThingsConstructorTest() {
         Contact contact = new Contact(contactId, firstNameTest, lastNameTest,
@@ -120,6 +133,7 @@ public class ContactTest {
                 () -> assertEquals(addressTest, contact.getAddress()));
     }
 
+    // Test the updateFirstName method 
     @Test
     void updateFirstNameTest() {
         Contact contact = new Contact();
@@ -136,6 +150,7 @@ public class ContactTest {
                         () -> contact.updateFirstName(tooLongFirstName)));
     }
 
+    // Test the updateLastName method
     @Test
     void updateLastNameTest() {
         Contact contact = new Contact();
@@ -152,6 +167,7 @@ public class ContactTest {
                         () -> contact.updateLastName(tooLongFirstName)));
     }
 
+        // Test the updatePhoneNumber method
     @Test
     void updatePhoneNumberTest() {
         Contact contact = new Contact();
@@ -175,6 +191,7 @@ public class ContactTest {
                         () -> contact.updatePhoneNumber(contactId)));
     }
 
+    // Test the updateAddress method
     @Test
     void updateAddressTest() {
         Contact contact = new Contact();
@@ -190,6 +207,7 @@ public class ContactTest {
                         () -> contact.updateAddress(tooLongAddress)));
     }
 
+    // Test the updateContactId method
     @Test
     void updateContactIdTest() {
         Contact contact = new Contact();
