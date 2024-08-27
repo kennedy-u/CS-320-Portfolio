@@ -1,7 +1,7 @@
 # CS-320-Portfolio
-- [Class Entities and Services](../src/main)
-- [Tests](./src/test)
-- [Report](./docs/Project-2-Summary_Reflection.pdf)
+- [Class Entities and Services](src/main)
+- [Tests](src/test)
+- [Report](docs/Project-2-Summary_Reflection.pdf)
 
 ## Reflection
 
