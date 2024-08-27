@@ -45,27 +45,42 @@ public class Appointment {
         updateDescription(description);
     }
 
-    public void updateAppointmentId(String id) {
-        if (id == null) {
+    public void updateAppointmentId(String id)
+    {
+        if (id == null)
+        {
             throw new IllegalArgumentException("Appointment ID cannot be null.");
-        } else if (id.length() > APPOINTMENT_ID_LENGTH) {
+        }
+        else if (id.length() > APPOINTMENT_ID_LENGTH)
+        {
             throw new IllegalArgumentException("Appointment ID cannot exceed " +
                     APPOINTMENT_ID_LENGTH +
                     " characters.");
-        } else {
+        }
+        else
+        {
             this.appointmentId = id;
         }
     }
 
-    public String getAppointmentId() { return appointmentId; }
+    public String getAppointmentId()
+    {
+        return appointmentId;
+    }
 
-    public void updateDate(Date date) {
-        if (date == null) {
+    public void updateDate(Date date)
+    {
+        if (date == null)
+        {
             throw new IllegalArgumentException("Appointment date cannot be null.");
-        } else if (date.before(new Date())) {
+        }
+        else if (date.before(new Date()))
+        {
             throw new IllegalArgumentException(
                     "Cannot make appointment in the past.");
-        } else {
+        }
+        else
+        {
             this.appointmentDate = date;
         }
     }

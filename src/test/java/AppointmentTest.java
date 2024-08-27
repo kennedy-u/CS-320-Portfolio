@@ -28,7 +28,8 @@ class AppointmentTest {
     }
 
     @Test
-    void testUpdateAppointmentId() {
+    void testUpdateAppointmentId()
+    {
         Appointment appt = new Appointment();
         assertThrows(IllegalArgumentException.class,
                 () -> appt.updateAppointmentId(null));
@@ -47,7 +48,8 @@ class AppointmentTest {
     }
 
     @Test
-    void testUpdateDate() {
+    void testUpdateDate()
+    {
         Appointment appt = new Appointment();
         assertThrows(IllegalArgumentException.class, () -> appt.updateDate(null));
         assertThrows(IllegalArgumentException.class,

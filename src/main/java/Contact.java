@@ -99,18 +99,23 @@ public class Contact {
         }
     }
 
-    protected void updatePhoneNumber(String phoneNumber) {
+    protected void updatePhoneNumber(String phoneNumber)
+    {
         String regex = "[0-9]+";
-        if (phoneNumber == null) {
+        if (phoneNumber == null)
+        {
             throw new IllegalArgumentException("Phone number cannot be empty.");
-        } else if (phoneNumber.length() != CONTACT_PHONENUM_LENGTH) {
+        }
+        else if (phoneNumber.length() != CONTACT_PHONENUM_LENGTH) {
             throw new IllegalArgumentException(
                     "Phone number length invalid. Ensure it is " +
                             CONTACT_PHONENUM_LENGTH + " digits.");
-        } else if (!phoneNumber.matches(regex)) {
+        }
+        else if (!phoneNumber.matches(regex)) {
             throw new IllegalArgumentException(
                     "Phone number cannot have anything but numbers");
-        } else {
+        }
+        else {
             this.phoneNumber = phoneNumber;
         }
     }
@@ -128,12 +133,16 @@ public class Contact {
     }
 
     protected void updateContactId(String contactId) {
-        if (contactId == null) {
+        if (contactId == null)
+        {
             throw new IllegalArgumentException("Contact ID cannot be empty");
-        } else if (contactId.length() > CONTACT_ID_LENGTH) {
+        }
+        else if (contactId.length() > CONTACT_ID_LENGTH) {
             throw new IllegalArgumentException("Contact ID cannot be longer than " +
                     CONTACT_ID_LENGTH + " characters");
-        } else {
+        }
+        else
+        {
             this.contactId = contactId;
         }
     }

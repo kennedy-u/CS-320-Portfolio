@@ -47,20 +47,28 @@ public class Task {
 
     public final String getDescription() { return description; }
 
-    protected void setDescription(String taskDescription) {
-        if (taskDescription == null || taskDescription.length() > 50) {
+    protected void setDescription(String taskDescription)
+    {
+        if (taskDescription == null || taskDescription.length() > 50)
+        {
             throw new IllegalArgumentException(
                     "Task description is invalid. Ensure it is shorter than 50 characters and not empty.");
-        } else {
+        }
+        else
+        {
             this.description = taskDescription;
         }
     }
 
-    private void checkTaskId(String taskId) {
-        if (taskId == null || taskId.length() > 10) {
+    private void checkTaskId(String taskId)
+    {
+        if (taskId == null || taskId.length() > 10)
+        {
             throw new IllegalArgumentException(
                     "Error: The task ID was null or longer than 10 characters");
-        } else {
+        }
+        else
+        {
             this.taskId = taskId;
         }
     }
